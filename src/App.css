@@ -24,52 +24,10 @@ h1 {
   border-radius: 10px;
 }
 
-.Input {
-  display: flex;
-  margin: auto;
-  border-radius: 4px;
-  width: 85%;
-  height: 40px;
-  font-size: 1.25rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.Button {
-  display: flex;
-  margin: 0 auto;
-}
-
 .list {
   display: flex;
   flex-direction: column;
   padding-left: 0;
   margin: 10px 0;
   overflow-y: scroll;
-}
-
-.list__div {
-  display: flex;
-  margin: 10px auto;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  gap: 5px;
-}
-
-.list__div__li {
-  list-style: none;
-  overflow-x: scroll;
-  border-radius: 4px;
-  width: 80%;
-  height: 40px;
-  background-color: white;
-  color: #282c34;
-  font-size: 1.25rem;
-  padding-left: 5px;
-}
-
-.btn-danger {
-  border-radius: 100%;
 }
