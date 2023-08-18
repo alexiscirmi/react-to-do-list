@@ -1,12 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Input from './components/Input/Input';
-import AddButton from './components/AddButton/AddButton';
 import Task from './components/Task/Task';
 
 function App() {
 
+  const [list, setList] = useState([]);
 
+  const addTask = task => {
+    setList([task, ...list]);
+  }
+
+  const deleteTask = id => {
+    const updatedList = list.filter((task) => task.id !== id);
+    setList(updatedList);
+  }
 
   return (
     <div className='App'>
@@ -15,11 +23,17 @@ function App() {
         <h1>To Do List</h1>
         <div className='container'>
 
-          <Input />
-          <AddButton />
+          <Input onSubmit={addTask} />
 
           <div className="list">
-            <Task taskDescription='hola' />
+            {list.map((task) =>
+              <Task
+                id={task.id}
+                description={task.description}
+                deleteTask={deleteTask}
+              />
+            )
+            }
           </div>
 
         </div>
