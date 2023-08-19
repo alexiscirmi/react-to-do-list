@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
 import Input from './components/Input/Input';
 import Task from './components/Task/Task';
+import './App.css';
 
 function App() {
 
@@ -23,7 +23,9 @@ function App() {
         <h1>To Do List</h1>
         <div className='container'>
 
-          <Input onSubmit={addTask} />
+          <Input
+            submit={addTask}
+          />
 
           <div className="list">
             {list.map((task) =>
@@ -32,8 +34,7 @@ function App() {
                 description={task.description}
                 deleteTask={deleteTask}
               />
-            )
-            }
+            )}
           </div>
 
         </div>

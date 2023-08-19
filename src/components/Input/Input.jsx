@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './input.css'
 
-function Input({ onSubmit }) {
+function Input({ submit }) {
 
   const [input, setInput] = useState('');
 
@@ -15,7 +15,7 @@ function Input({ onSubmit }) {
       description: input
     }
 
-    onSubmit(newTask)
+    submit(newTask)
   }
 
   return (
