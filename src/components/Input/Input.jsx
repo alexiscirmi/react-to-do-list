@@ -18,7 +18,8 @@ function Input({ submit }) {
         description: input
       }
 
-      submit(newTask)
+      submit(newTask);
+      setInput('');
     }
   }
 
@@ -28,6 +29,7 @@ function Input({ submit }) {
         className="input form-control"
         type="text"
         placeholder="Type your new task"
+        value={input}
         onChange={handleChange}
       />
 
