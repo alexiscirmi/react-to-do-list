@@ -7,8 +7,10 @@ function App() {
 
   const [list, setList] = useState([]);
 
-  const addTask = task => {
-    setList([task, ...list]);
+  const addTask = newTask => {
+    if (!list.some((task) => task.description === newTask.description)) {
+      setList([newTask, ...list]);
+    }
   }
 
   const deleteTask = id => {
