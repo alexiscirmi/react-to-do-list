@@ -10,12 +10,16 @@ function Input({ submit }) {
   }
 
   const createTask = e => {
-    const newTask = {
-      id: crypto.randomUUID(),
-      description: input
-    }
 
-    submit(newTask)
+    if (input.length > 0) {
+
+      const newTask = {
+        id: crypto.randomUUID(),
+        description: input
+      }
+
+      submit(newTask)
+    }
   }
 
   return (

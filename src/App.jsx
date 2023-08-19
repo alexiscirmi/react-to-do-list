@@ -19,7 +19,6 @@ function App() {
   return (
     <div className='App'>
       <main>
-
         <h1>To Do List</h1>
         <div className='container'>
 
@@ -30,6 +29,7 @@ function App() {
           <div className="list">
             {list.map((task) =>
               <Task
+                key={task.id}
                 id={task.id}
                 description={task.description}
                 deleteTask={deleteTask}
@@ -38,7 +38,6 @@ function App() {
           </div>
 
         </div>
-
       </main>
     </div>
   );
