@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import './input.css'
+import './input.css';
 
 function Input({ submit }) {
 
   const [input, setInput] = useState('');
 
   const handleChange = e => {
-    setInput(e.target.value);
-  }
+    setInput(e.target.value)
+  };
 
   const createTask = e => {
 
@@ -16,12 +16,12 @@ function Input({ submit }) {
       const newTask = {
         id: crypto.randomUUID(),
         description: input
-      }
+      };
 
       submit(newTask);
       setInput('');
     }
-  }
+  };
 
   return (
     <>

@@ -1,4 +1,4 @@
-import './task.css'
+import './task.css';
 
 function Task({ id, description, deleteTask }) {
 
@@ -8,6 +8,6 @@ function Task({ id, description, deleteTask }) {
       <button className="btn btn-danger" onClick={() => deleteTask(id)}>X</button>
     </div>
   );
-}
+};
 
 export default Task;

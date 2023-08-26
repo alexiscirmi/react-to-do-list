@@ -11,12 +11,12 @@ function App() {
     if (!list.some((task) => task.description === newTask.description)) {
       setList([newTask, ...list]);
     }
-  }
+  };
 
   const deleteTask = id => {
     const updatedList = list.filter((task) => task.id !== id);
     setList(updatedList);
-  }
+  };
 
   return (
     <div className='App'>
@@ -51,6 +51,6 @@ function App() {
       </footer>
     </div>
   );
-}
+};
 
 export default App;
