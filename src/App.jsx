@@ -21,7 +21,7 @@ function App() {
   return (
     <div className='App'>
       <main>
-        <h1>To Do List</h1>
+        <h1>TO DO LIST</h1>
         <div className='container'>
 
           <Input
