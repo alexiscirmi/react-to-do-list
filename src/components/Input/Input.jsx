@@ -23,6 +23,12 @@ function Input({ submit }) {
     }
   };
 
+  const handleEnter = e => {
+    if (e.key === 'Enter') {
+      createTask();
+    }
+  }
+
   return (
     <>
       <input
@@ -31,6 +37,7 @@ function Input({ submit }) {
         placeholder="Type your new task"
         value={input}
         onChange={handleChange}
+        onKeyDown={handleEnter}
       />
 
       <button
