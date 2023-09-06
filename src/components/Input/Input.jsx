@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './input.css';
+import styles from './Input.module.css'
 
 function Input({ submit }) {
 
@@ -32,9 +32,9 @@ function Input({ submit }) {
   return (
     <>
       <input
-        className="input form-control"
-        type="text"
-        placeholder="Type your new task"
+        className={`form-control ${styles.input}`}
+        type='text'
+        placeholder='Type your new task'
         value={input}
         onChange={handleChange}
         onKeyDown={handleEnter}
@@ -42,7 +42,7 @@ function Input({ submit }) {
 
       <button
         type='submit'
-        className='add-button btn btn-secondary'
+        className={`btn btn-secondary ${styles.addButton}`}
         onClick={createTask}
       >
         Add task

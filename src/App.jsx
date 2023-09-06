@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Input from './components/Input/Input';
 import Task from './components/Task/Task';
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,7 +7,18 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
-  const [list, setList] = useState([]);
+  const storedList = JSON.parse(localStorage.getItem('list'))
+
+  const [list, setList] = useState(storedList
+    ? storedList
+    : []
+  );
+
+  console.log(storedList)
+
+  useEffect(() => {
+    localStorage.setItem('list', JSON.stringify(list))
+  }, [list])
 
   const addTask = newTask => {
     if (!list.some((task) => task.description === newTask.description)) {
@@ -36,7 +47,7 @@ function App() {
             submit={addTask}
           />
 
-          <div className="list">
+          <div className='list'>
             {list.map((task) =>
               <Task
                 key={task.id}
@@ -51,8 +62,8 @@ function App() {
       </main>
 
       <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
+        position='bottom-right'
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop
         closeOnClick
@@ -60,7 +71,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+        theme='dark'
       />
 
       <footer className='m-2 fs-5'>
