@@ -14,8 +14,6 @@ function App() {
     : []
   );
 
-  console.log(storedList)
-
   useEffect(() => {
     localStorage.setItem('list', JSON.stringify(list))
   }, [list])
