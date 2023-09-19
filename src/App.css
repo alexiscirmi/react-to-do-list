@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Syne:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
 
 .App {
   display: flex;
@@ -21,7 +21,6 @@
 h1 {
   margin-top: 10px;
   margin-bottom: 20px;
-  font-family: 'Silkscreen', cursive;
   font-family: 'Syne', sans-serif;
 }
 
